@@ -1,20 +1,37 @@
 #include<iostream>
-#include<conio.h>
 using namespace std;
+
 int main()
 {
-    int num1,num2;
+    int n,i,count=-1;
+    cout<<"Enter the value:"<<endl;
+    cin>>n;
+    int ara[n+4];
+    for(i=0; i<n; i++)
+    {
+        cin>>ara[i];
+    }
 
-    cout<<"Enter the first number:"<<endl;
-    cin>>num1;
-    cout<<"Enter the second number:"<<endl;
-    cin>>num2;
-    cout<<showpoint;
-    cout<<fixed;
-    cout<<"The sum is:"<<num1+num2<<endl;
-    cout<<"The sub is:"<<num1-num2<<endl;
-    cout<<"The mul is:"<<num1*num2<<endl;
-    cout<<"The division is:"<<(float)num1/num2<<endl;
-    cout<<"The modulus is:"<<num1%num2<<endl;
-    getch();
+    int serach;
+    cout<<"Enter the serach number:"<<endl;
+    cin>>serach;
+
+    for(i=0; i<n; i++)
+    {
+        if(ara[i]==serach)
+        {
+            count=i;
+            break;
+        }
+    }
+    if(count==-1)
+    {
+        cout<<serach<<" "<<"data is not found"<<endl;
+    }
+    else{
+
+        cout<<serach<<""<<"data is found in index:"<<i<<endl;
+    }
+
+
 }
